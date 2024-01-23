@@ -1,2 +1,2 @@
-# genexa
+# Zenexa
 Company Website
