@@ -1,0 +1,137 @@
+:root{
+    --primary-color: #390900;
+    --start-color: #FFFF00;
+    --mix-color: #B16601;
+    --end-color: #FEBD00;
+
+    --one: #6C3630;
+    --two: #FFE5DC;
+    --three:#70A6FF;    
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: black;
+    overflow: hidden;
+  }
+
+#hero-section{
+    width: 100%;
+    padding: 30px;
+    background-color: var(--primary-color);
+    height: 100%;
+    color: var(--two);
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button a{
+    padding: 10px 40px;
+    border: 10px linear-gradient(from top, var(--start-color), var(--end-color));
+    border-radius: 8px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+
+@media (min-width: 768px) {
+    #hero-section{
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #main{
+        width: 400px;
+    }
+
+    #content{
+        
+    }
+}
+
+.boxes{
+    z-index: 1;
+    width: 100%;
+    align-items: center;
+    margin: auto auto;
+}
+
+.boxes .box{
+    background: rgba(0,0,0,0.4);
+    align-items: center;
+    margin-top: 50%;
+}
+
+@media (max-width: 768px){
+    #hero-section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #images{
+        padding: 30px;
+        margin-top: 80px;
+        margin-bottom: 60px;
+    }
+}
+
+.image img{
+    border: 2px solid transparent;
+    border-radius: 35%;
+}
+
+#content h4{
+    color: var(--two);
+}
+
+#content p{
+    color: var(--three);
+}
+
+#main{
+    position: relative;
+    z-index: 1;
+}
+
+#top, #bottom{
+    position: absolute;
+    z-index: 0;
+}
+
+#top:hover, #bottom:hover{
+    z-index: 2;
+}
+
+#top{
+    top: -10%;
+    left: 0%;
+    right: 80%;
+    bottom: 80%;
+    width: 40%;
+    height: 40%;
+    border-left: 2px solid var(--end-color);
+    border-right: 2px solid var(--start-color);
+}
+
+#bottom{
+    top: 80%;
+    left: 60%;
+    right: 10%;
+    bottom: 0;
+    width: 40%;
+    height: 40%;
+    border-left: 2px  50% solid var(--end-color);
+    border-right: 2px 50% solid var(--start-color);
+}
